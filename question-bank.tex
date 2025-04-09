@@ -1,0 +1,107 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{multicol}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{COMP30023 — Computer Systems}
+\lhead{Question Bank}
+\rfoot{Page \thepage}
+
+\titleformat{\section}{\Large\bfseries}{\thesection.}{1em}{}
+\setlength{\parskip}{0.5em}
+
+\begin{document}
+
+\begin{center}
+    \LARGE \textbf{COMP30023 — Computer Systems}\\
+    \normalsize\vspace{1em}
+    \large \textbf{Question Bank}\\
+    \normalsize\vspace{0.8em}
+    Kevin Yu
+\end{center}
+
+\vspace{1em}
+
+\begin{enumerate}[label=\textbf{Q\arabic*.}]
+    \item Five processes arrive at the same time with the following burst times and priorities:
+    \begin{table}[h!]
+        \centering
+        \begin{tabular}{|c|c|c|}
+        \hline
+        \textbf{Process} & \textbf{Burst Time (ms)} & \textbf{Priority (5 = highest)} \\ \hline
+        $P_1$      & $8$      & $3$      \\ \hline
+        $P_2$      & $4$      & $5$      \\ \hline
+        $P_3$      & $9$      & $1$      \\ \hline
+        $P_4$      & $5$      & $2$      \\ \hline
+        $P_5$      & $2$      & $4$      \\ \hline
+        \end{tabular}
+        \label{tab:processes}
+    \end{table}
+
+    Calculate the average turnaround time under the following scheduling algorithms:
+    \begin{enumerate}[label=(\alph*)]
+        \item First-Come, First-Served (FCFS)\\
+        \item Shortest Job First (SJF)\\
+        \item Round Robin (RR) with a time quantum of $4$ ms\\
+        \item Priority Scheduling (higher number = higher priority)\\
+    \end{enumerate}
+
+
+    \item A system has 16-bit logical addresses and uses a page size of 256 bytes.
+    \begin{enumerate}[label=(\alph*)]
+        \item How many bits are used for the page number and how many for the offset?\\
+        \item How many entries are in the page table?\\
+        \item If the physical address space is 4 KB, how many bits are required for the physical address?\\
+    \end{enumerate}
+
+
+
+    \item You are given the following list of memory hole sizes in sequential order (in MB):
+
+    [10, 4, 20, 18, 7, 9, 12, 15]
+    
+    You also have a set of memory allocation requests (in MB): 
+    
+    [12, 10, 9]\\
+    
+    Using each of the following memory allocation strategies, determine which hole each request will be allocated to (if possible), and update the hole sizes accordingly after each allocation:
+
+    \begin{enumerate}[label=(\alph*)]
+        \item First Fit\\
+        \item Best Fit\\
+        \item Worst Fit\\
+    \end{enumerate}
+
+    \item Calculate the size (in bytes) of a page table for a system with:
+    
+    \begin{itemize}
+        \item Virtual address space: 1 GB
+        \item Page size: 4 KB
+        \item Page table entry size: 4 bytes\\
+    \end{itemize}
+
+    \item You are given the following data about a virtual memory system:
+    \begin{itemize}
+        \item The Translation Lookaside Buffer (TLB) can hold 2048 entries and can be accessed in 1 clock cycle (1 nsec).
+        \item A page table entry (PTE) can be found in 100 clock cycles or 100 nsec.
+        \item The average page replacement time is 10 milliseconds.
+    \end{itemize}
+    
+    If page references are handled by the TLB $98\%$ of the time, and only $0.01\%$ lead to a page fault, what is the effective address-translation time?\\
+
+    \item A virtual memory system has a logical address space of 64 pages, each 2 KB in size, and 32 physical frames.
+    
+    \begin{enumerate}
+        \item How many bits are needed for the logical address?\\
+        \item How many bits are needed for the physical address?\\
+    \end{enumerate}
+
+\end{enumerate}
+
+\end{document}

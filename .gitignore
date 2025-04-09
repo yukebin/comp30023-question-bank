@@ -1,0 +1,43 @@
+# LaTeX intermediate and output files
+*.aux
+*.bbl
+*.blg
+*.brf
+*.idx
+*.ilg
+*.ind
+*.lof
+*.log
+*.lot
+*.out
+*.toc
+*.acn
+*.acr
+*.alg
+*.glg
+*.glo
+*.gls
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.run.xml
+
+# PDF and other output files
+*.pdf
+*.dvi
+*.ps
+*.eps
+
+# Backup files
+*.bak
+*.sav
+*.swp
+*.tmp
+
+# Editor-specific files
+.vscode/
+.idea/
+*.code-workspace
+
+# MacOS-specific files
+.DS_Store
