@@ -23,7 +23,6 @@
 *.run.xml
 
 # PDF and other output files
-*.pdf
 *.dvi
 *.ps
 *.eps
